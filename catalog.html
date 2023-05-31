@@ -7,9 +7,9 @@
   <body>
     <header class="main-page-header">
       <nav class="navigation">
-        <p class="logo-sedona">
+        <a class="logo-sedona">
           <img src="#" alt="Логотип города Седона">
-        </p>
+        </a>
         <ul class="page-menu">
           <li class="page-menu-item">
             <a href="index.html">Главное</a>
@@ -24,14 +24,14 @@
         <ul class="user-menu">
           <li class="user-menu-item">
             <a href="#">
-              <img src="#" alt="Поиск по сайту"></a>
+              <img class="visually-hidden" src="#" alt="Поиск по сайту"></a>
           </li>
           <li class="user-menu-item">
             <a href="#">
-              <img src="#" alt="Избранное"></a>
+              <img class="visually-hidden" src="#" alt="Избранное"></a>
           </li>
           <li class="user-menu-item">
-            <button class="button-menu">Хочу сюда</button>
+            <a href="#">Хочу сюда</a>
           </li>
         </ul>
       </nav>
@@ -43,20 +43,138 @@
         </h1>
         <ul class="filter-list">
           <li class="filter-item">
-            <img src="#" alt="Изображение дома">
+            <img class="visually-hidden" src="#" alt="Изображение дома">
           </li>
           <li class="filter-item">
-            <img src="#" alt="Указатель">
+            <img class="visually-hidden" src="#" alt="Указатель">
           </li>
           <li class="filter-item">
             Гостиницы
           </li>
         </ul>
       </section>
-      <section class="result-hotels">
+      <section class="choice-hotels">
+        <form action="#" method="get">
+          <legend>Инфраструктура:</legend>
+            <label><input type="checkbox" name="pool" value="pool" checked>Бассейн</label>
+            <label><input type="checkbox" name="parking" value="pool" checked>Парковка</label>
+            <label><input type="checkbox" name="wifi" value="wifi-field">Wi-Fi</label>
+          <legend>Тип жилья:</legend>
+            <label><input type="radio" name="home-type" value="hotel" checked>Гостиница</label>
+            <label><input type="radio" name="home-type" value="motel">Мотель</label>
+            <label><input type="radio" name="home-type" value="apartament">Аппартаменты</label>
+          <legend>Стоимость жилья, ₽:</legend>
+            <label>от<input type="text" value="0" ></label>
+            <label>до <input type="text" value="9000"></label>
+          <button type="button">Применить</button>
+          <button type="reset">Сбросить</button>
+        </form>
+      </section>
+      <section class="results-hotels">
+          <p>Найдено: 38</p>
+          <ul class="sorting">
+            <li>Сначала дешевые</li>
+            <li><img src="#"></li>
+          </ul>
+          <ul class="sorting-icons">
+            <li><img src="#" alt="первый вид"></li>
+            <li><img src="#" alt="второй вид"></li>
+            <li><img src="#" alt="третий вид"></li>
+          </ul>
+      </section>
+      <section class="catalog-hotels">
 
+        <div class="card-hotel">
+          <img src="#" alt="Отель Amara Resort Spa">
+          <span>Amara Resort & Spa</span>
+          <dl>
+            <dt>Гостиница</dt>
+            <dd>От 4000 ₽</dd>
+          </dl>
+          <button type="button">Подробнее</button>
+          <button type="button">В избранное</button>
+          <dl>
+            <dt><img src="#" alt="Звезд у отеля"></dt>
+            <dd>Рейтин отеля: 8,5</dd>
+          </dl>
+        </div>
+
+        <div class="card-hotel">
+          <img src="#" alt="Отель Villas at Poco Diablo">
+          <span>Villas at Poco Diablo</span>
+          <dl>
+            <dt>Гостиница</dt>
+            <dd>От 5000 ₽</dd>
+          </dl>
+          <button type="button">Подробнее</button>
+          <button type="button">В избранном</button>
+          <dl>
+            <dt><img src="#" alt="Звезд у отеля"></dt>
+            <dd>Рейтин отеля: 9,2</dd>
+          </dl>
+        </div>
+
+        <div class="card-hotel">
+          <img src="#" alt="Отель Desert Quail Inn">
+          <span>Desert Quail Inn</span>
+          <dl>
+            <dt>Гостиница</dt>
+            <dd>От 2500 ₽</dd>
+          </dl>
+          <button type="button">Подробнее</button>
+          <button type="button">В избранное</button>
+          <dl>
+            <dt><img src="#" alt="Звезд у отеля"></dt>
+            <dd>Рейтин отеля: 5,9</dd>
+          </dl>
+        </div>
+        <div class="card-hotel">
+          <img src="#" alt="Отель GreenTree Inn">
+          <span>GreenTree Inn</span>
+          <dl>
+            <dt>Гостиница</dt>
+            <dd>От 1500 ₽</dd>
+          </dl>
+          <button type="button">Подробнее</button>
+          <button type="button">В избранное</button>
+          <dl>
+            <dt><img src="#" alt="Звезд у отеля"></dt>
+            <dd>Рейтин отеля: 5,0</dd>
+          </dl>
+        </div>
+        <div class="pagination">
+          <a href="#" title="1" class="active">1</a>
+          <a href="#" title="2">2</a>
+          <a href="#" title="3">3</a>
+          <a href="#" title="4">4</a>
+          <a href="#" title="...">...</a>
+          <a href="#" title="10">10</a>
+        </div>
       </section>
     </main>
-    <footer></footer>
+      <footer class="main-footer">
+        <ul class="social">
+          <li class="social-item">
+            <a href="https://vk.com/htmlacademy">
+              <img class="visually-hidden" src="#" alt="Vkontakte">
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://t.me/htmlacademy">
+              <img class="visually-hidden" src="#" alt="Telegram">
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.youtube.com/user/htmlacademyru">
+              <img class="visually-hidden" src="#" alt="Youtube">
+            </a>
+          </li>
+        </ul>
+        <a class="phone" href="tel:+78128121212">+7(812)812-12-12
+        </a>
+        <a href="https://htmlacademy.ru/">
+          <img src="#" alt="Логотип html Академии">
+        </a>
+      </footer>
   </body>
 </html>
