@@ -9,8 +9,8 @@
   <body>
     <header class="main-page-header">
       <nav class="navigation">
-        <a class="logo-sedona">
-          <img src="index.html" alt="Логотип города Седона">
+        <a href="index.html">
+          <img class="logo-sedona" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип города Седона">
         </a>
         <ul class="page-menu">
           <li class="page-menu-item">
@@ -26,11 +26,13 @@
         <ul class="user-menu">
           <li class="user-menu-item">
             <a href="#">
-              <img class="visually-hidden" src="#" alt="Поиск по сайту"></a>
+              <img class="visually-hidden" src="images/icon-glass.svg" width="18" height="18" alt="Поиск по сайту">
+            </a>
           </li>
           <li class="user-menu-item">
             <a href="#">
-              <img class="visually-hidden" src="#" alt="Избранное"></a>
+              <img class="visually-hidden" src="images/icon-heart.svg" width="18" height="17" alt="Избранное">
+            </a>
           </li>
           <li class="user-menu-item">
             <a href="#">Хочу сюда</a>
@@ -38,26 +40,34 @@
         </ul>
       </nav>
     </header>
-    <main class="catalog-hotels">
+    <main>
       <section class="filter-hotels">
         <h1 class="visually-hidden">Выбор гостиниц в городе Седона</h1>
         <p>
           Гостиницы Седоны
         </p>
-        <ul class="filter-list">
-          <li class="filter-item">
-            <img class="visually-hidden" src="#" alt="Изображение дома">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs-item">
+
+            <!-- возможно сделаю фоновым изображением в CSS -->
+
+            <a href="index.html">
+              <img class="visually-hidden" src="images/breadcrumbs-home.svg" width="12" height="12" alt="Изображение дома">
+            </a>
           </li>
-          <li class="filter-item">
-            <img class="visually-hidden" src="#" alt="Указатель">
+          <li class="breadcrumbs-item">
+
+            <!-- возможно сделаю фоновым изображением в CSS -->
+
+            <img class="visually-hidden" src="images/breadcrumbs-arrow.svg" width="7" height="10" alt="Указатель">
           </li>
-          <li class="filter-item">
+          <li class="breadcrumbs-item">
             Гостиницы
           </li>
         </ul>
       </section>
       <section class="choice-hotels">
-        <form action="#" method="get">
+        <form action="#" method="post">
           <legend>Инфраструктура:</legend>
             <input type="checkbox" name="comfort" id="pool" checked>
             <label for="pool">Бассейн</label>
@@ -73,8 +83,8 @@
             <input type="radio" name="home-type" id="apartament">
             <label for="apartament">Аппартаменты</label>
           <legend>Стоимость жилья, ₽:</legend>
-            <input type="text" name="price-home" id="price-home-1" placeholder="от">
-            <input type="text" name="price-home" id="price-home-2" placeholder="до">
+            <input type="text" name="price-home" id="price-home-1" placeholder="0 от">
+            <input type="text" name="price-home" id="price-home-2" placeholder="9000 до">
             <input type="range" name="" min="0" max="11">
           <button type="button">Применить</button>
           <button type="reset">Сбросить</button>
@@ -92,18 +102,18 @@
             </form>
           </li>
           <li>
-            <button type="button">
-              <img src="#" alt="отобразить плитками">
+            <button class="button-view" type="button">
+              <img src="images/catalog-view-1.svg" width="16" height="14" alt="отобразить плитками">
             </button>
           </li>
           <li>
-            <button type="button">
-              <img src="#" alt="отобразить крупно">
+            <button class="button-view" type="button">
+              <img src="images/catalog-view-2.svg" width="16" height="14" alt="отобразить крупно">
             </button>
           </li>
           <li>
-            <button type="button">
-              <img src="#" alt="отобразить списком">
+            <button class="button-view" type="button">
+              <img src="images/catalog-view-3.svg" width="16" height="14" alt="отобразить списком">
             </button>
           </li>
         </ul>
@@ -111,8 +121,8 @@
       <section>
         <ul class="catalog-hotels">
           <li class="card-hotel">
-            <a href="#">
-              <img src="#" alt="Отель Amara Resort Spa">
+            <a href="">
+              <img src="images/hotels/amara-resort-spa.jpg" width="300" height="212" alt="Отель Amara Resort Spa">
             </a>
             <a href="#">Amara Resort & Spa</a>
             <dl>
@@ -120,16 +130,21 @@
               <dd>От 4000 ₽</dd>
             </dl>
             <a class="hotel-detailed" href="#">Подробнее</a>
-            <button type="button">В избранное</button>
+            <button class="button-favourite" type="button">В избранное</button>
             <dl>
-              <dt><img src="#" alt="4 звезды у отеля"></dt>
+              <dt>
+
+                <!-- можно попробовать выставить число повторений звезды как фонового изображения в CSS -->
+
+                <img src="images/star.svg" width="18" height="17" alt="4 звезды у отеля">
+              </dt>
               <dd>Рейтин отеля: 8,5</dd>
             </dl>
           </li>
 
           <li class="card-hotel">
             <a href="#">
-              <img src="#" alt="Отель Villas at Poco Diablo">
+              <img src="images/hotels/villas-at-poco-diablo.jpg" width="300" height="212" alt="Отель Villas at Poco Diablo">
             </a>
             <a href="#">Villas at Poco Diablo</a>
             <dl>
@@ -137,16 +152,18 @@
               <dd>От 5000 ₽</dd>
             </dl>
             <a class="hotel-detailed" href="#">Подробнее</a>
-            <button type="button">В избранное</button>
+            <button class="button-favourite" type="button">В избранное</button>
             <dl>
-              <dt><img src="#" alt="4 звезды у отеля"></dt>
+              <dt>
+                <img src="images/star.svg" width="18" height="17" alt="4 звезды у отеля">
+              </dt>
               <dd>Рейтин отеля: 9,2</dd>
             </dl>
           </li>
 
           <li class="card-hotel">
             <a href="#">
-              <img src="#" alt="Отель Desert Quail Inn">
+              <img src="images/hotels/desert-quail-inn.jpg" width="300" height="212" alt="Отель Desert Quail Inn">
             </a>
             <a href="#">Desert Quail Inn</a>
             <dl>
@@ -154,16 +171,18 @@
               <dd>От 2500 ₽</dd>
             </dl>
             <a class="hotel-detailed" href="#">Подробнее</a>
-            <button type="button">В избранное</button>
+            <button class="button-favourite" type="button">В избранное</button>
             <dl>
-              <dt><img src="#" alt="3 звезды у отеля"></dt>
+              <dt>
+                <img src="images/star.svg" width="18" height="17" alt="3 звезды у отеля">
+              </dt>
               <dd>Рейтин отеля: 5,9</dd>
             </dl>
           </li>
 
           <li class="card-hotel">
             <a href="#">
-              <img src="#" alt="Отель GreenTree Inn">
+              <img src="images/hotels/green-tree-inn.jpg" width="300" height="212" alt="Отель GreenTree Inn">
             </a>
             <a href="#">GreenTree Inn</a>
             <dl>
@@ -171,9 +190,11 @@
               <dd>От 1500 ₽</dd>
             </dl>
             <a class="hotel-detailed" href="#">Подробнее</a>
-            <button type="button">В избранное</button>
+            <button class="button-favourite" type="button">В избранное</button>
             <dl>
-              <dt><img src="#" alt="2 звезды у отеля"></dt>
+              <dt>
+                <img src="images/star.svg" width="18" height="17" alt="2 звезды у отеля">
+              </dt>
               <dd>Рейтин отеля: 5,0</dd>
             </dl>
           </li>
@@ -200,28 +221,27 @@
         </form>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="page-footer">
       <ul class="social">
         <li class="social-item">
           <a href="https://vk.com/htmlacademy">
-            <img class="visually-hidden" src="#" alt="Vkontakte">
+            <img class="visually-hidden" src="images/icon-vk.svg" width="24" height="14" alt="Vkontakte">
           </a>
         </li>
         <li class="social-item">
           <a href="https://t.me/htmlacademy">
-            <img class="visually-hidden" src="#" alt="Telegram">
+            <img class="visually-hidden" src="images/icon-telegram.svg" width="18" height="15" alt="Telegram">
           </a>
         </li>
         <li class="social-item">
           <a href="https://www.youtube.com/user/htmlacademyru">
-            <img class="visually-hidden" src="#" alt="Youtube">
+            <img class="visually-hidden" src="images/icon-youtube.svg" width="22" height="17" alt="Youtube">
           </a>
         </li>
       </ul>
-      <a class="phone" href="tel:+78128121212">+7(812)812-12-12
-      </a>
+      <a class="phone" href="tel:+78128121212">+7(812)812-12-12</a>
       <a href="https://htmlacademy.ru/">
-        <img src="#" alt="Логотип html Академии">
+        <img src="images/logo-academy.svg" width="115" height="33" alt="Логотип html Академии">
       </a>
     </footer>
   </body>
