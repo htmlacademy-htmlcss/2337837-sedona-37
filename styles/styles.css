@@ -549,14 +549,18 @@ body {
   gap: 16px;
 }
 
-.input-line {
-  width: 143px;
+.input-start {
+  position: relative;
+}
+.input-start label {
+  position: absolute;
 }
 
 .choice-hotels-button {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  gap: 32px;
 }
 
 .button-apply {
