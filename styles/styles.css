@@ -764,11 +764,24 @@ body {
   opacity: 30%;
 }
 
+.input-start input:hover, .input-end input:hover  {
+  background-color: #e2dfdf;
+}
+
+.input-start input:focus, .input-end input:focus  {
+  background-color: #e2dfdf;
+}
+
 .input-start input{
-  display: block;
+  display: flex;
   width: 143px;
   padding: 12px 20px;
   box-sizing: border-box;
+  border-style: none;
+
+
+  border-radius: 4px 0 0 4px;
+  background-color: #F2F2F2;
 
 }
 
@@ -777,6 +790,8 @@ body {
   width: 143px;
   padding: 12px 20px;
   box-sizing: border-box;
+  border: none;
+  background-color: #F2F2F2;
 }
 .input-number {
   font-size: 18px;
@@ -790,7 +805,7 @@ body {
     flex-wrap: wrap;
     gap: 2px;
     width: 288px;
-    padding-bottom: 36px;
+    padding-bottom: 45px;
 }
 
 .range-scale {
