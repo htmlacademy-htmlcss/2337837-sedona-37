@@ -42,7 +42,7 @@
                 <span class="visually-hidden">В избранном</span>
               </a>
             </li>
-            <li class="user-menu-item padding-button">
+            <li class="user-menu-item">
               <a class="button button-catalog" href="catalog.html">
                 Хочу сюда!
               </a>
@@ -58,24 +58,27 @@
               <h2>Гостиницы Седоны</h2>
               <ul class="breadcrumbs">
                 <li class="breadcrumbs-item">
-                  <a href="index.html">
-                    <img
-                    src="images/breadcrumbs-home.svg"
-                    width="12"
-                    height="12"
-                    alt="Изображение дома"
-                    />
+                  <a class="breadcrumbs-home" href="index.html">
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.5 0.5L0.5 6.30006V12.5001H12.5V6.30006L6.5 0.5ZM11.5 11.5001H1.5V6.70005L6.5 1.9L11.5 6.70005V11.5001Z"/>
+                      <path d="M4.5 10.5001H5.5V8.00005H7.5V10.5001H8.5V7.00005H4.5V10.5001Z"/>
+                    </svg>
+                    <span class="visually-hidden">Главная страница.</span>
                   </a>
                 </li>
                 <li class="breadcrumbs-item">
-                  <img
-                  src="images/breadcrumbs-arrow.svg"
-                  width="7"
-                  height="10"
-                  alt="Указатель"
-                  />
+                  <a class="breadcrumbs-arrow" href="catalog.html">
+                    <svg width="8" height="11" viewBox="0 0 8 11" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.91526 4.96875L2.16526 0.71875C1.91526 0.46875 1.41526 0.46875 1.04026 0.71875C0.665263 0.96875 0.790263 1.46875 1.04026 1.71875L5.16526 5.46875L1.16526 9.21875C0.915263 9.46875 0.915263 9.96875 1.16526 10.2188C1.16526 10.3438 1.54026 10.4687 1.66526 10.4687C1.79026 10.4687 2.04026 10.3438 2.16526 10.2188L6.91526 5.96875C7.29026 5.71875 7.29026 5.21875 6.91526 4.96875Z"/>
+                    </svg>
+                    <span class="visually-hidden">К выбору гостиниц.</span>
+                  </a>
                 </li>
-                <li class="breadcrumbs-item">Гостиницы</li>
+                <li class="breadcrumbs-item">
+                  <a href="catalog.html">
+                    Гостиницы
+                  </a>
+                </li>
               </ul>
             </div>
             <form action="#" method="post">
@@ -86,16 +89,16 @@
                     <div class="column">
                       <div class="line">
                         <label class="control">
-                          <input class="control-input" type="checkbox" name="comfort" checked>
+                          <input class="visually-hidden control-input" type="checkbox" name="comfort" checked>
                           <span class="control-mark"></span>
                           <span class="control-label">Бассейн</span>
                         </label>
                       </div>
                       <div class="line">
-                        <input type="checkbox" name="comfort" id="parking" checked />
+                        <input class="visually-hidden control-input" type="checkbox" name="comfort" id="parking" checked />
                         <label for="parking">Парковка</label>
                       </div>
-                      <div class="line">
+                      <div class="visually-hidden control-input" class="line">
                         <input type="checkbox" name="comfort" id="wifi" />
                         <label for="wifi">wifi</label>
                       </div>
@@ -127,14 +130,13 @@
                           <label class="label-start">
                             от
                           </label>
-                            <input class="input-number" type="text" name="price-home" value="0"/>
+                            <input class="input-number number-start" type="text" name="price-home" value="0"/>
                         </div>
                         <div class="input-end">
                           <label class="label-end">
                             до
                           </label>
-                            <input class="input-number" type="text" name="price-home" value="9000"/>
-
+                            <input class="input-number number-end" type="text" name="price-home" value="9000"/>
                         </div>
                       </div>
                       <div class="range">
@@ -163,7 +165,7 @@
             <div class="sorting-price">
               <div class="sorting-form">
                 <form action="#" method="post">
-                <select name="price">
+                <select class="select-price" name="price">
                   <option value="Сначала дешевые">Сначала дешевые</option>
                   <option value="Сначала дорогие">Сначала дорогие</option>
                 </select>
@@ -172,7 +174,7 @@
               <div class="sorting-views">
                 <ul class="sorting">
                   <li>
-                    <button class="button-view view-1" type="button">
+                    <button class="button-view view-1 button-view-active" type="button">
                       <span class="visually-hidden">
                         Отобразить плитками.
                       </span>
@@ -366,7 +368,7 @@
               method="post"
             >
               <input
-                class="subscribe-input"
+                class="subscribe-input subscribe-background"
                 type="text"
                 name="e-mail"
                 placeholder="Ваш e-mail"
