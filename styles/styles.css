@@ -11,7 +11,6 @@
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/ptsans-700.woff2") format("woff2");
-  font-display: swap;
 }
 
 html {
@@ -319,14 +318,14 @@ body {
 .block-description-1 {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 60px;
   padding: 103px 85px;
+  width: 400px;
 }
 
 .block-description-1 h3 {
-  width: 175px;
   margin: 0;
   padding: 0;
   position: relative;
@@ -335,14 +334,13 @@ body {
 .block-description-2 {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  gap: 60px;
+  gap: 62px;
   padding: 113px 85px;
+  width: 400px;
 }
 
 .block-description-2 h3 {
-  width: 175px;
   margin: 0;
   padding: 0;
   position: relative;
@@ -364,7 +362,7 @@ body {
   position: absolute;
   content: "";
   left: 50%;
-  bottom: -30px;
+  bottom: -32px;
   width: 60px;
   height: 2px;
   background-color: #000000;
@@ -390,6 +388,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 800px;
 }
 
 .block-blue {
@@ -421,8 +420,6 @@ body {
 .offers-item {
   display: flex;
   justify-content: center;
-  width: 400px;
-  padding: 80px 0;
 }
 
 .blue {
@@ -432,10 +429,11 @@ body {
 .offers-item-description {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 30px;
   width: 230px;
+  padding: 80px 85px;
 }
 
 .offers-item h3 {
@@ -450,6 +448,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+  margin: 0;
 }
 
 .button-search {
@@ -743,65 +742,142 @@ body {
 
 .legend-title {
   font-weight: 700;
+  padding: 0;
+  margin: 0;
 }
 
-.control {
-  position: relative;
-  display: block;
-  padding-left: 36px;
-}
-
-.control:hover {
-  opacity: 0.6;
-  cursor: pointer;
-}
-
-.control-mark {
+.custom-checkbox {
   position: absolute;
-  top: 4px;
-  left: 0;
-  width: 16px;
-  height: 16px;
+  z-index: -1;
+  opacity: 0;
+}
+.custom-checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.custom-checkbox + label::before {
+  content: " ";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
   background-color: #ffffff;
   border-radius: 4px;
+  margin-right: 16px;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
-
-.control:focus {
-  outline: 2px solid #83b3d3;
-}
-
-.control:active {
-  opacity: 0.3;
-}
-
-.control-input [type="checkbox"]:checked + .control-mark::before,
-.control-input [type="checkbox"]:checked + .control-mark::after {
+.custom-checkbox:checked + label::before {
+  background-color: #ffffff;
   background-image: url("../images/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* стили при наведении курсора на checkbox */
+.custom-checkbox:not(:disabled) + label:hover::before {
+  background-color: #83b3d3;
+}
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.custom-checkbox:not(:disabled):active + label::before {
+  background-color: #83b3d3;
+}
+/* стили для чекбокса, находящегося в фокусе */
+.custom-checkbox:focus-visible + label::before {
+  outline: 1px solid #83b3d3;
+}
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox:focus-visible:not(:checked) + label::before {
+  background-color: #ffffff;
+}
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox:disabled + label::before {
+  background-color: #999b9c;
+}
+
+.custom-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.custom-radio + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.custom-radio + label::before {
+  content: " ";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+/* стили при наведении курсора на переключатель */
+.custom-radio:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #83b3d3;
+}
+/* стили для активного состояния переключателя (при нажатии на него) */
+.custom-radio:not(:disabled):active + label::before {
+  background-image: url("../images/radio.svg");
+  background-position: center center;
+  background-color: #83b3d3;
+}
+/* стили для переключателя, находящегося в фокусе */
+.custom-radio:focus-visible + label::before {
+  outline: 1px solid #83b3d3;
+  background-image: url("../images/radio.svg");
+}
+/* стили для переключателя, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-radio:focus-visible:not(:checked) + label::before {
+  background-color: #83b3d3;
+}
+/* стили для переключателя, находящегося в фокусе находящегося в состоянии checked */
+.custom-radio:checked + label::before {
+  background-color: #ffffff;
+  background-image: url("../images/radio.svg");
+  background-position: center center;
+}
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-radio:disabled + label::before {
+  background-color: #999b9c;
 }
 
 .choice-hotels-list-1 legend {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
   text-align: left;
 }
 
 .choice-hotels-list-2 legend {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
   text-align: left;
 }
 
 .column {
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   gap: 16px;
 }
 
-.line {
+.check-radio {
   display: flex;
+  justify-content: flex-start;
   gap: 16px;
+  font-size: 18px;
+  font-family: PT Sans;
+  line-height: 23px;
+  padding: 0;
+  margin: 0;
 }
 
 .input-start {
   position: relative;
+  margin-right: 2px;
 }
 
 .input-end {
@@ -811,7 +887,7 @@ body {
 .label-start {
   position: absolute;
   color: #000000;
-  top: 10px;
+  top: 12px;
   right: 20px;
   font-size: 18px;
   font-family: PT Sans;
@@ -823,7 +899,7 @@ body {
 .label-end {
   position: absolute;
   color: #000000;
-  top: 10px;
+  top: 12px;
   right: 20px;
   font-size: 18px;
   font-family: PT Sans;
@@ -834,7 +910,7 @@ body {
 
 .input-number {
   font-size: 18px;
-  font-family: PT Sans;
+  font-family: "PT Sans";
   font-weight: 700;
   line-height: 24px;
   background-color: #f2f2f2;
@@ -863,16 +939,20 @@ body {
 .choice-line {
   display: flex;
   flex-wrap: wrap;
-  gap: 2px;
   width: 288px;
-  padding-bottom: 45px;
 }
 
+.range {
+  min-width: 288px;
+  min-height: 20px;
+  margin-top: 36px;
+}
 .range-scale {
   position: relative;
   height: 4px;
   border: none;
   background-color: #807e7e;
+  top: 8px;
 }
 .range-bar {
   position: absolute;
@@ -893,8 +973,6 @@ body {
 }
 
 .toggle-min:hover {
-  position: absolute;
-
   background-image: url("../images/buttonmini-hover.svg");
 }
 
@@ -912,7 +990,7 @@ body {
 }
 
 .toggle-max {
-  left: 209px;
+  left: 206px;
   top: -8px;
 }
 
@@ -920,31 +998,33 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 32px;
 }
 
 .button-apply {
-  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   background: #82b3d3;
-  border-radius: 4px;
-  padding: 8px 50px;
+  padding: 8px 8px;
   color: #ffffff;
+  min-width: 191px;
+  min-height: 36px;
 }
 
 .button-reset {
-  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   background: none;
-  border: 0;
-  padding: 8px 58px;
+  padding: 8px 8px;
   color: #ffffff;
+  margin-top: 30px;
+  min-width: 191px;
+  min-height: 36px;
 }
 
 .button-reset:hover {
@@ -952,7 +1032,7 @@ body {
 }
 
 .button-reset:focus {
-  box-shadow: inset 0 0 0 4px #82b3d3;
+  box-shadow: inset 0 0 0 5px #82b3d3;
   outline: none;
 }
 
@@ -985,7 +1065,7 @@ body {
   text-transform: uppercase;
   color: #000000;
   padding: 0;
-  padding-bottom: 38px;
+  padding-bottom: 39px;
   margin: 0;
 }
 
@@ -1018,7 +1098,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   min-width: 292px;
-  padding: 14px 20px;
+  padding: 12px 18px;
   padding-right: 30px;
   border-radius: 4px;
   border: 2px solid #e5e5e5;
@@ -1079,7 +1159,7 @@ body {
 .catalog-view {
   display: grid;
   grid-template-columns: 340px 340px 340px;
-  gap: 16px 20px;
+  gap: 18px 20px;
   padding-bottom: 79px;
 }
 
