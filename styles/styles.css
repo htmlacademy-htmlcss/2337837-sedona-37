@@ -177,12 +177,12 @@ body {
 }
 
 .button:active {
-  opacity: 50%;
+  color: hsla(30, 17%, 93%, 0.3);
 }
 
 .button:disabled {
   opacity: 50%;
-  background-color: #f2f2f2;
+  background-color: #e5e5e5;
 }
 
 .button-catalog {
@@ -775,21 +775,21 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
 }
-/* стили при наведении курсора на checkbox */
+/* при наведении курсора на checkbox */
 .custom-checkbox:not(:disabled) + label:hover::before {
   background-color: #83b3d3;
 }
-/* стили для активного состояния чекбокса (при нажатии на него) */
+/* для активного состояния чекбокса (при нажатии на него) */
 .custom-checkbox:not(:disabled):active + label::before {
   background-color: #83b3d3;
 }
-/* стили для чекбокса, находящегося в фокусе */
+/* для чекбокса, находящегося в фокусе */
 .custom-checkbox:focus-visible + label::before {
-  outline: 1px solid #83b3d3;
+  outline: 2px solid #83b3d3;
 }
-/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-.custom-checkbox:focus-visible:not(:checked) + label::before {
-  background-color: #ffffff;
+/* для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox:not(:checked):focus-visible + label::before {
+  outline: 2px solid #83b3d3;
 }
 /* стили для чекбокса, находящегося в состоянии disabled */
 .custom-checkbox:disabled + label::before {
@@ -817,32 +817,35 @@ body {
   border-radius: 50%;
   margin-right: 16px;
 }
-/* стили при наведении курсора на переключатель */
+/* при наведении курсора на переключатель */
 .custom-radio:not(:disabled):not(:checked) + label:hover::before {
-  border-color: #83b3d3;
+  background-color: #83b3d3;
 }
-/* стили для активного состояния переключателя (при нажатии на него) */
+/* при наведении курсора на переключатель */
+.custom-radio:checked + label:hover:before {
+  background-color: #83b3d3;
+}
+/* для активного состояния переключателя (при нажатии на него) */
 .custom-radio:not(:disabled):active + label::before {
   background-image: url("../images/radio.svg");
   background-position: center center;
   background-color: #83b3d3;
 }
-/* стили для переключателя, находящегося в фокусе */
+/* для переключателя, находящегося в фокусе */
 .custom-radio:focus-visible + label::before {
-  outline: 1px solid #83b3d3;
-  background-image: url("../images/radio.svg");
+  outline: 2px solid #83b3d3;
 }
-/* стили для переключателя, находящегося в фокусе и не находящегося в состоянии checked */
-.custom-radio:focus-visible:not(:checked) + label::before {
-  background-color: #83b3d3;
+/* для переключателя, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-radio:focus-visible :not(:checked) + label::before {
+  boutline: 2px solid #83b3d3;
 }
-/* стили для переключателя, находящегося в фокусе находящегося в состоянии checked */
+/* для переключателя, находящегося в фокусе находящегося в состоянии checked */
 .custom-radio:checked + label::before {
   background-color: #ffffff;
   background-image: url("../images/radio.svg");
   background-position: center center;
 }
-/* стили для чекбокса, находящегося в состоянии disabled */
+/* стили для переключателя, находящегося в состоянии disabled */
 .custom-radio:disabled + label::before {
   background-color: #999b9c;
 }
@@ -972,16 +975,17 @@ body {
   cursor: pointer;
 }
 
-.toggle-min:hover {
-  background-image: url("../images/buttonmini-hover.svg");
+.range-toggle:hover {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.range-toggle:focus {
-  background-image: url("../images/buttonmini-focus.svg");
+.range-toggle:focus-visible {
+  outline: 3px solid #82b3d3;
 }
 
 .range-toggle:active {
-  background-image: url("../images/buttonmini-active.svg");
+  outline: 2px solid #82b3d3;
 }
 
 .toggle-min {
@@ -1031,13 +1035,15 @@ body {
   opacity: 70%;
 }
 
-.button-reset:focus {
+.button-reset:focus-visible {
   box-shadow: inset 0 0 0 5px #82b3d3;
   outline: none;
 }
 
 .button-reset:active {
   opacity: 30%;
+  outline: none;
+  box-shadow: none;
 }
 .button-reset:disabled {
   opacity: 10%;
@@ -1102,10 +1108,18 @@ body {
   padding-right: 30px;
   border-radius: 4px;
   border: 2px solid #e5e5e5;
-  background-image: url("../images/select-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: right 18px center;
-  appearance: none;
+}
+
+.select-price:hover {
+  outline: 3px solid #82b3d3;
+}
+
+.select-price:focus-visible {
+  outline: 3px solid #82b3d3;
+}
+
+.select-price:disabled {
+  outline: none;
 }
 
 .button-view {
@@ -1116,8 +1130,17 @@ body {
   min-width: 48px;
   min-height: 48px;
 }
-.button-view-active {
-  border: 2px solid #000;
+
+.button-view :hover {
+  outline: 2px solid #000000;
+}
+
+.button-view:focus-visible {
+  outline: 2px solid #68a2ca;
+}
+
+.button-view:active {
+  outline: 2px solid #000;
 }
 
 .view-1 {
@@ -1136,24 +1159,6 @@ body {
   background-image: url("../images/catalog-view-3.svg");
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.view-1:hover,
-.view-2:hover,
-.view-3:hover {
-  border: 2px solid #000000;
-}
-
-.view-1:active,
-.view-2:active,
-.view-3:active {
-  border: 2px solid #000000;
-}
-
-.view-1:focus,
-.view-2:focus,
-.view-3:focus {
-  border: 2px solid #68a2ca;
 }
 
 .catalog-view {
