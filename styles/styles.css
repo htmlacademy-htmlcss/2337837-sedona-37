@@ -532,11 +532,18 @@ body {
   font-size: 18px;
   line-height: 24px;
   color: #000000;
-
   border-radius: 4px 0 0 4px;
   border-style: none;
   padding: 14px 20px;
   width: 100%;
+}
+
+.subscribe-input:hover {
+  outline: 2px solid #82b3d3;
+}
+
+.subscribe-input:focus-visible {
+  outline: 2px solid #82b3d3;
 }
 
 .subscribe-background {
@@ -604,11 +611,21 @@ body {
 .youtube:focus {
   color: #68a2ca;
 }
+.vkontakte:focus-visible,
+.telegram:focus-visible,
+.youtube:focus-visible {
+  outline: none;
+  color: #68a2ca4d;
+}
 
 .vkontakte:active,
 .telegram:active,
 .youtube:active {
   color: #68a2ca4d;
+}
+
+.subscribe-background {
+  background: #f2f2f2;
 }
 
 .phone {
@@ -618,7 +635,6 @@ body {
   align-self: center;
   text-transform: uppercase;
   color: #000000;
-  padding: 0 194px 0 195px;
 }
 
 .logo-academy {
@@ -634,6 +650,11 @@ body {
 .phone:focus,
 .logo-academy:focus {
   color: #756157;
+}
+.phone:focus-visible,
+.logo-academy:focus-visible {
+  color: #756157;
+  outline: none;
 }
 
 .phone:active,
@@ -837,7 +858,7 @@ body {
 }
 /* для переключателя, находящегося в фокусе и не находящегося в состоянии checked */
 .custom-radio:focus-visible :not(:checked) + label::before {
-  boutline: 2px solid #83b3d3;
+  outline: 2px solid #83b3d3;
 }
 /* для переключателя, находящегося в фокусе находящегося в состоянии checked */
 .custom-radio:checked + label::before {
@@ -1108,6 +1129,10 @@ body {
   padding-right: 30px;
   border-radius: 4px;
   border: 2px solid #e5e5e5;
+  background-image: url("../images/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  appearance: none;
 }
 
 .select-price:hover {
@@ -1131,22 +1156,19 @@ body {
   min-height: 48px;
 }
 
-.button-view :hover {
-  outline: 2px solid #000000;
+.button-view:hover {
+  border: 2px solid #000;
 }
 
 .button-view:focus-visible {
-  outline: 2px solid #68a2ca;
-}
-
-.button-view:active {
-  outline: 2px solid #000;
+  border: 2px solid #68a2ca;
 }
 
 .view-1 {
   background-image: url("../images/catalog-view-1.svg");
   background-repeat: no-repeat;
   background-position: center;
+  border: 2px solid #000;
 }
 
 .view-2 {
