@@ -32,14 +32,15 @@
             </ul>
           </div>
           <ul class="user-menu">
-            <li class="user-menu-item img-glass">
-              <a href="#">
+            <li class="user-menu-item">
+              <a class="img-glass" href="#">
                 <span class="visually-hidden">Искать</span>
               </a>
             </li>
-            <li class="user-menu-item img-heart">
-              <a href="#">
+            <li class="user-menu-item">
+              <a class="img-heart" href="#">
                 <span class="visually-hidden">В избранном</span>
+                <span class="heart-number">12</span>
               </a>
             </li>
             <li class="user-menu-item">
@@ -304,6 +305,115 @@
           </a>
         </div>
       </footer>
+    </div>
+
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-card">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form
+            class="check-date-form"
+            action="https://echo.htmlacademy.ru/"
+            method="post"
+          >
+            <p class="parametr-group">
+              <label class="parametr" for="data-in"> Дата Заезда:</label>
+              <input
+                class="check-date"
+                type="text"
+                name="data-in"
+                value="27 апреля 2020"
+                placeholder="Укажите дату заезда"
+              />
+              <span class="comment-input error">
+                Мы не можем отправить вас в прошлое.
+              </span>
+            </p>
+
+            <p class="parametr-group">
+              <label class="parametr" for="data-out">Дата Выезда: </label>
+              <input
+                class="check-date"
+                type="text"
+                name="data-out"
+                value="1 сентября 2023"
+                placeholder="Укажите дату выезда"
+              />
+              <span class="comment-input">
+                На эти даты есть свободные номера. Пока есть.
+              </span>
+            </p>
+            <div class="options-search">
+              <div class="add-parametr">
+                <label class="parametr" for="adult">Взрослые:</label>
+                <ul class="select-number">
+                  <li class="select-number-item">
+                    <button class="button button-minus" type="button">
+                      <span class="visually-hidden">Убавить.</span>
+                    </button>
+                  </li>
+                  <li class="select-number-item">
+                    <input
+                      class="number"
+                      type="text"
+                      id="adult"
+                      name="adult"
+                      value="2"
+                      min="0"
+                      max="10"
+                    />
+                  </li>
+                  <li class="select-number">
+                    <button class="button button-plus" type="button">
+                      <span class="visually-hidden">Прибавить.</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="add-parametr">
+                  <div class="container-parametr-info">
+                    <label class="parametr parametr-children" for="children">Дети:</label>
+                    <div class="tooltip-toggle">
+                      <svg width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
+                      </svg>
+                    </div>
+                  </div>
+                <ul class="select-number">
+                  <li class="select-number-item">
+                    <button class="button button-minus" type="button">
+                      <span class="visually-hidden">Убавить.</span>
+                    </button>
+                  </li>
+                  <li class="select-number-item">
+                    <div class="select-number">
+                      <input
+                        class="number"
+                        type="text"
+                        id="children"
+                        name="children"
+                        value="2"
+                        min="0"
+                        max="10"
+                      />
+                  </li>
+                  <li class="select-number-item">
+                    <button class="button button-plus" type="button">
+                      <span class="visually-hidden">Прибавить.</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </form>
+          <button class="button button-search-modal" type="button">
+              НАЙТИ
+            </button>
+        </section>
+      </div>
     </div>
   </body>
 </html>
