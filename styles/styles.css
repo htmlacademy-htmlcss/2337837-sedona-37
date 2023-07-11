@@ -82,6 +82,16 @@ body {
   color: #000000;
 }
 
+.page-menu-item a:hover {
+  background-color: #7dadcc;
+  color: #fdfafa;
+}
+
+.page-menu-item a:active {
+  background-color: #7dadcc;
+  color: #0f0f0f;
+}
+
 .page-first {
   position: relative;
 }
@@ -1394,10 +1404,24 @@ body {
   background-color: #f2f2f2;
   border: none;
   border-radius: 50%;
-  background-image: url("../images/closed-button.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   cursor: pointer;
+}
+
+.modal-close-button:hover {
+  outline: none;
+  background-color: #e2e0e0;
+  color: #000000;
+  fill-opacity: 0.9;
+}
+
+.modal-close-button:focus-visible {
+  outline: 2px solid #82b3d3;
+}
+
+.modal-close-button:active {
+  outline: none;
+  color: #000000;
+  fill-opacity: 0.2;
 }
 
 .modal-content {
@@ -1426,6 +1450,7 @@ body {
 
 .parametr-group {
   margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1438,19 +1463,87 @@ body {
   font-weight: 700;
   line-height: 24px;
   text-align: start;
-  width: 137px;
+  max-width: 137px;
 }
 
-.parametr-children {
-  width: 55px;
+.form-label {
+  font-family: "Pt Sans";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: start;
+  margin: 0;
+  max-width: 137px;
 }
 
-.container-parametr-info {
-  display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-  align-items: center;
-  width: 137px;
+.form-label-parametr {
+  margin: 0;
+  padding: 8px;
+  max-width: 137px;
+}
+
+.tooltip {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+}
+
+.tooltip-toggle {
+  background-color: #83b3d3;
+  border-radius: 50px;
+  width: 26px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  display: block;
+}
+
+.tooltip-toggle:hover {
+  background-color: #4c87af;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tooltip-text {
+  background-color: #242424;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+  text-transform: none;
+  padding: 18px 15px 22px 22px;
+  border-radius: 10px;
+  display: block;
+  width: 216px;
+  position: absolute;
+  top: 100%;
+  margin-top: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: ;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text:after {
+  content: "";
+  background-image: url("../images/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .select-number {
@@ -1465,15 +1558,12 @@ body {
   margin: 0;
   padding: 12px 20px;
   font-size: 18px;
-  font-family: PT Sans;
+  font-family: "PT Sans";
   font-weight: 700;
   line-height: 24px;
   border: none;
   border-radius: 4px;
   background-color: #f2f2f2;
-  background-image: url("../images/calendar.svg");
-  background-position: right 20px center;
-  background-repeat: no-repeat;
   width: 400px;
 }
 
@@ -1504,22 +1594,7 @@ body {
   margin: 0;
   padding: 0;
   align-items: center;
-  width: 247px;
-}
-
-.add-info {
-  display: flex;
-  width: 55px;
-}
-
-.tooltip-toggle {
-  padding: 0;
-  border: none;
-  background-color: #83b3d3;
-  border-radius: 50px;
-  width: 26px;
-  height: 26px;
-  align-self: center;
+  width: 249px;
 }
 
 .options-search {
@@ -1531,12 +1606,10 @@ body {
 .button-minus {
   width: 40px;
   height: 48px;
-  padding: 14px 10px;
+  padding: 14px 10px 19px 10px;
   cursor: pointer;
   border-radius: 4px 0 0 4px;
-  background-image: url("../images/modal-minus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  fill-opacity: 0.2;
 }
 .button-plus {
   width: 40px;
@@ -1544,9 +1617,28 @@ body {
   padding: 14px 10px;
   cursor: pointer;
   border-radius: 0 4px 4px 0;
-  background-image: url("../images/modal-plus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  fill-opacity: 0.2;
+}
+
+.button-minus:hover,
+.button-plus:hover {
+  outline: none;
+  color: #000000;
+  fill-opacity: 0.9;
+}
+
+.button-minus:focus-visible,
+.button-plus:focus-visible {
+  outline: 2px solid #82b3d3;
+  color: #000000;
+  fill-opacity: 0.9;
+}
+
+.button-minus:active,
+.button-plus:active {
+  outline: none;
+  color: #000000;
+  fill-opacity: 0.2;
 }
 
 .number {
@@ -1561,6 +1653,10 @@ body {
   border: none;
   appearance: none;
   border-radius: 0;
+}
+
+.number:focus-visible {
+  outline: 2px solid #82b3d3;
 }
 
 .button-search-modal {
