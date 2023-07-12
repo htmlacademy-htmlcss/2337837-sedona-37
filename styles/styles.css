@@ -83,7 +83,7 @@ body {
 }
 
 .page-menu-item a:hover {
-  background-color: #7dadcc;
+  background-color: #756257;
   color: #fdfafa;
 }
 
@@ -156,7 +156,6 @@ body {
 .heart-number {
   position: absolute;
   content: " ";
-  top: 0;
   width: 20px;
   height: 20px;
   left: 45%;
@@ -167,6 +166,7 @@ body {
   font-family: "PT Sans";
   font-size: 10px;
   line-height: 20px;
+  font-weight: 400;
 }
 
 .button {
@@ -312,6 +312,7 @@ body {
   line-height: 28px;
   text-transform: uppercase;
 }
+
 .block-advantages {
   display: flex;
   flex-wrap: wrap;
@@ -428,6 +429,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .offers-item {
   display: flex;
   justify-content: center;
@@ -455,6 +457,7 @@ body {
   text-transform: uppercase;
   margin: 0;
 }
+
 .offers-item p {
   font-weight: 400;
   font-size: 18px;
@@ -523,6 +526,7 @@ body {
   text-transform: uppercase;
   margin: 0;
 }
+
 .subscribe p {
   font-weight: 400;
   font-size: 22px;
@@ -785,10 +789,13 @@ body {
   width: 288px;
 }
 
+
 .legend-title {
   font-weight: 700;
   padding: 0;
   margin: 0;
+  border: 0;
+
 }
 
 .custom-checkbox {
@@ -796,11 +803,13 @@ body {
   z-index: -1;
   opacity: 0;
 }
+
 .custom-checkbox + label {
   display: inline-flex;
   align-items: center;
   user-select: none;
 }
+
 .custom-checkbox + label::before {
   content: " ";
   display: inline-block;
@@ -814,6 +823,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
 }
+
 .custom-checkbox:checked + label::before {
   background-color: #ffffff;
   background-image: url("../images/tick.svg");
@@ -846,11 +856,13 @@ body {
   z-index: -1;
   opacity: 0;
 }
+
 .custom-radio + label {
   display: inline-flex;
   align-items: center;
   user-select: none;
 }
+
 .custom-radio + label::before {
   content: " ";
   display: inline-block;
@@ -895,12 +907,12 @@ body {
   background-color: #999b9c;
 }
 
-.choice-hotels-list-1 legend {
+.choice-hotels-list-1 fieldset {
   margin-bottom: 32px;
   text-align: left;
 }
 
-.choice-hotels-list-2 legend {
+.choice-hotels-list-2 fieldset {
   margin-bottom: 32px;
   text-align: left;
 }
@@ -995,6 +1007,7 @@ body {
   min-height: 20px;
   margin-top: 36px;
 }
+
 .range-scale {
   position: relative;
   height: 4px;
@@ -1002,6 +1015,7 @@ body {
   background-color: #807e7e;
   top: 8px;
 }
+
 .range-bar {
   position: absolute;
   height: 4px;
@@ -1090,6 +1104,7 @@ body {
   outline: none;
   box-shadow: none;
 }
+
 .button-reset:disabled {
   opacity: 10%;
 }
@@ -1101,7 +1116,7 @@ body {
   margin: 0;
 }
 
-.rezults {
+.results {
   width: 1060px;
   padding: 50px 70px 60px 70px;
 }
@@ -1365,13 +1380,12 @@ body {
   border-radius: 4px;
 }
 
-.non-decor {
+.no-decor {
   background-color: #fff;
   color: #000;
 }
 
 .modal-container {
-  display: none;
   display: flex;
   position: fixed;
   top: 0;
@@ -1415,7 +1429,7 @@ body {
 }
 
 .modal-close-button:focus-visible {
-  outline: 2px solid #82b3d3;
+  outline: 3px solid #82b3d3;
 }
 
 .modal-close-button:active {
@@ -1517,7 +1531,6 @@ body {
   text-transform: none;
   padding: 18px 15px 22px 22px;
   border-radius: 10px;
-  display: block;
   width: 216px;
   position: absolute;
   top: 100%;
@@ -1525,12 +1538,16 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  display: ;
+  display: none;
 }
 
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
   display: block;
+}
+
+.tooltip-toggle:focus-visible {
+  outline: 3px solid #82b3d3;
 }
 
 .tooltip-text:after {
@@ -1565,6 +1582,10 @@ body {
   border-radius: 4px;
   background-color: #f2f2f2;
   width: 400px;
+}
+
+.check-date:focus-visible {
+  outline: 3px solid #82b3d3;
 }
 
 .comment-input {
@@ -1611,9 +1632,9 @@ body {
   border-radius: 4px 0 0 4px;
   fill-opacity: 0.2;
 }
-.button-plus {
-  width: 40px;
-  height: 48px;
+.button-plus svg {
+  width: 14px;
+  height: 14px;
   padding: 14px 10px;
   cursor: pointer;
   border-radius: 0 4px 4px 0;
@@ -1623,6 +1644,7 @@ body {
 .button-minus:hover,
 .button-plus:hover {
   outline: none;
+  box-shadow: none;
   color: #000000;
   fill-opacity: 0.9;
 }
@@ -1631,6 +1653,7 @@ body {
 .button-plus:focus-visible {
   outline: 2px solid #82b3d3;
   color: #000000;
+  box-shadow: none;
   fill-opacity: 0.9;
 }
 
@@ -1638,6 +1661,7 @@ body {
 .button-plus:active {
   outline: none;
   color: #000000;
+  box-shadow: none;
   fill-opacity: 0.2;
 }
 
@@ -1657,6 +1681,7 @@ body {
 
 .number:focus-visible {
   outline: 2px solid #82b3d3;
+  box-shadow: none;
 }
 
 .button-search-modal {
