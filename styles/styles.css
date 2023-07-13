@@ -1405,7 +1405,7 @@ body {
 }
 
 .modal-container-close {
-  display: ;
+  display: none;
 }
 
 .modal-close-button {
@@ -1487,19 +1487,21 @@ body {
   line-height: 24px;
   text-align: start;
   margin: 0;
-  max-width: 137px;
+  max-width: 100px;
 }
 
 .form-label-parametr {
   margin: 0;
-  padding: 8px;
-  max-width: 137px;
+  padding: 0;
+  padding-left: 10px;
+  text-align: start;
 }
 
 .tooltip {
   position: absolute;
   width: 26px;
   height: 26px;
+  padding-left: 10px;
 }
 
 .tooltip-toggle {
@@ -1529,15 +1531,17 @@ body {
   line-height: 20px;
   font-weight: normal;
   text-transform: none;
-  padding: 18px 15px 22px 22px;
+  padding: 22px 20px 20px 19px;
   border-radius: 10px;
   width: 216px;
   position: absolute;
   top: 100%;
   margin-top: 13px;
+  margin-left: 5px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: none;
 }
 
@@ -1569,6 +1573,8 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+  background-color: #f2f2f2;
+  border-radius: 4px;
 }
 
 .check-date {
@@ -1581,6 +1587,10 @@ body {
   border: none;
   border-radius: 4px;
   background-color: #f2f2f2;
+  width: 400px;
+  background-image: url("../images/calendar.svg");
+  background-position: right 20px center;
+  background-repeat: no-repeat;
   width: 400px;
 }
 
@@ -1625,19 +1635,24 @@ body {
 }
 
 .button-minus {
-  width: 40px;
-  height: 48px;
-  padding: 14px 10px 19px 10px;
+  width: 20px;
+  height: 20px;
+  margin: 14px 10px;
+  padding: 0;
+  padding-bottom: 4px;
   cursor: pointer;
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
   fill-opacity: 0.2;
 }
-.button-plus svg {
-  width: 14px;
-  height: 14px;
-  padding: 14px 10px;
+
+.button-plus {
+  width: 20px;
+  height: 20px;
+  margin: 14px 10px;
+  padding: 0;
+  padding-top: 2px;
   cursor: pointer;
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px;
   fill-opacity: 0.2;
 }
 
@@ -1651,7 +1666,7 @@ body {
 
 .button-minus:focus-visible,
 .button-plus:focus-visible {
-  outline: 2px solid #82b3d3;
+  outline: 3px solid #82b3d3;
   color: #000000;
   box-shadow: none;
   fill-opacity: 0.9;
@@ -1667,7 +1682,7 @@ body {
 
 .number {
   width: 31px;
-  padding: 14px 0;
+  padding: 0;
   text-align: center;
   font-size: 18px;
   font-family: "PT Sans";
@@ -1676,11 +1691,11 @@ body {
   background-color: #f2f2f2;
   border: none;
   appearance: none;
-  border-radius: 0;
+  border-radius: 4px;
 }
 
 .number:focus-visible {
-  outline: 2px solid #82b3d3;
+  outline: 3px solid #82b3d3;
   box-shadow: none;
 }
 
