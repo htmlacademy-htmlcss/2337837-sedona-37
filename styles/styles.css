@@ -21,7 +21,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   background-color: #f2f2f2;
@@ -42,7 +42,7 @@ body {
 .page-header {
   display: flex;
   justify-content: space-between;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   text-transform: capitalize;
   background-color: #ffffff;
@@ -165,7 +165,7 @@ body {
   background-color: #7db54f;
   color: #ffffff;
   border-radius: 50%;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 10px;
   line-height: 20px;
   font-weight: 400;
@@ -545,7 +545,7 @@ body {
 }
 
 .subscribe-input {
-  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -569,7 +569,7 @@ body {
 }
 
 .button-subscribe {
-  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -840,23 +840,23 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
 }
-/* при наведении курсора на checkbox */
+
 .custom-checkbox:not(:disabled)+label:hover::before {
   background-color: #83b3d3;
 }
-/* для активного состояния чекбокса (при нажатии на него) */
+
 .custom-checkbox:not(:disabled):active+label::before {
   background-color: #83b3d3;
 }
-/* для чекбокса, находящегося в фокусе */
+
 .custom-checkbox:focus-visible+label::before {
   outline: 2px solid #83b3d3;
 }
-/* для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+
 .custom-checkbox:not(:checked):focus-visible+label::before {
   outline: 2px solid #83b3d3;
 }
-/* стили для чекбокса, находящегося в состоянии disabled */
+
 .custom-checkbox:disabled+label::before {
   background-color: #999b9c;
 }
@@ -884,35 +884,35 @@ body {
   border-radius: 50%;
   margin-right: 16px;
 }
-/* при наведении курсора на переключатель */
+
 .custom-radio:not(:disabled):not(:checked)+label:hover::before {
   background-color: #83b3d3;
 }
-/* при наведении курсора на переключатель */
+
 .custom-radio:checked+label:hover:before {
   background-color: #83b3d3;
 }
-/* для активного состояния переключателя (при нажатии на него) */
+
 .custom-radio:not(:disabled):active+label::before {
   background-image: url("../images/radio.svg");
   background-position: center center;
   background-color: #83b3d3;
 }
-/* для переключателя, находящегося в фокусе */
+
 .custom-radio:focus-visible+label::before {
   outline: 2px solid #83b3d3;
 }
-/* для переключателя, находящегося в фокусе и не находящегося в состоянии checked */
+
 .custom-radio:focus-visible :not(:checked)+label::before {
   outline: 2px solid #83b3d3;
 }
-/* для переключателя, находящегося в фокусе находящегося в состоянии checked */
+
 .custom-radio:checked+label::before {
   background-color: #ffffff;
   background-image: url("../images/radio.svg");
   background-position: center center;
 }
-/* стили для переключателя, находящегося в состоянии disabled */
+
 .custom-radio:disabled+ label::before {
   background-color: #999b9c;
 }
@@ -939,7 +939,7 @@ body {
   justify-content: flex-start;
   gap: 16px;
   font-size: 18px;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   line-height: 23px;
   padding: 0;
   margin: 0;
@@ -960,7 +960,7 @@ body {
   top: 12px;
   right: 20px;
   font-size: 18px;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-weight: 400;
   line-height: 24px;
   opacity: 30%;
@@ -980,7 +980,7 @@ body {
 
 .input-number {
   font-size: 18px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   line-height: 24px;
   background-color: #f2f2f2;
@@ -1074,7 +1074,7 @@ body {
 }
 
 .button-apply {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -1087,7 +1087,7 @@ body {
 }
 
 .button-reset {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -1172,7 +1172,7 @@ body {
 }
 
 .select-price {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   min-width: 292px;
@@ -1316,7 +1316,7 @@ body {
 
 .button-favourite {
   width: 140px;
-  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -1357,7 +1357,7 @@ body {
 
 .button-rating {
   width: 140px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1394,7 +1394,7 @@ body {
 }
 
 .button-pagination {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -1484,7 +1484,7 @@ body {
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
-  font-family: "Pt Sans";
+  font-family: "Pt Sans", sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -1509,7 +1509,7 @@ body {
 }
 
 .parametr {
-  font-family: "Pt Sans";
+  font-family: "Pt Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -1518,7 +1518,7 @@ body {
 }
 
 .form-label {
-  font-family: "Pt Sans";
+  font-family: "Pt Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -1618,7 +1618,7 @@ body {
   margin: 0;
   padding: 12px 20px;
   font-size: 18px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   line-height: 24px;
   border: none;
@@ -1640,7 +1640,7 @@ body {
 }
 
 .comment-input {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 21px;
   color: #333333;
@@ -1726,7 +1726,7 @@ body {
   padding: 0;
   text-align: center;
   font-size: 18px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   line-height: 20px;
   background-color: #f2f2f2;
@@ -1742,7 +1742,7 @@ body {
 
 .button-search-modal {
   font-size: 20px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   line-height: 24px;
   margin-top: 48px;
