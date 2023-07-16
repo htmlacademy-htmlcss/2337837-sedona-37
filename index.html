@@ -17,8 +17,8 @@
               <img class="logo-sedona" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип города Седона">
             </a>
             <ul class="page-menu">
-              <li class="page-menu-item">
-                <a class="page-first" href="index.html">
+              <li class="page-menu-item page-first">
+                <a href="index.html">
                   Главная
                 </a>
               </li>
@@ -35,26 +35,31 @@
             </ul>
           </div>
           <ul class="user-menu">
-            <li class="user-menu-item">
-              <a class="img-glass" href="#">
-                <span class="visually-hidden">
-                  Искать
-                </span>
-              </a>
-            </li>
-            <li class="user-menu-item">
-              <a class="img-heart" href="#">
-                <span class="visually-hidden">
-                  В избранном
-                </span>
-                <span class="heart-number">
-                  12
-                </span>
-              </a>
-            </li>
+            <div class="user-menu-item-box">
+              <li class="user-menu-item">
+                <a class="img-glass" href="#">
+                  <span class="visually-hidden">
+                    Искать на странице.
+                  </span>
+                </a>
+              </li>
+              <li class="user-menu-item">
+                <a class="img-heart" href="#">
+                  <span class="visually-hidden">
+                    Добавлено в избранное.
+                  </span>
+                  <span class="heart-number">
+                    12
+                  </span>
+                </a>
+              </li>
+            </div>
             <li class="user-menu-item">
               <a class="button button-catalog" href="catalog.html">
                 Хочу сюда!
+                <span class="visually-hidden">
+                  Перейти к выбору гостиницы.
+                </span>
               </a>
             </li>
           </ul>
@@ -63,7 +68,7 @@
       <main class="main-content">
         <section class="welcome-banner">
           <h1 class="visually-hidden">
-            Добро пожаловать в замечательный город Седона
+            Добро пожаловать в замечательный город Седона!
           </h1>
           <img class="welcome-image" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать!">
         </section>
@@ -89,7 +94,7 @@
                 </p>
               </div>
               <div class="block-image">
-                <img class="content-img" src="images/real-city.jpg" width="800" height="385" alt="Вид на улицу города Седона">
+                <img class="content-img" src="images/real-city.jpg" width="800" height="385" alt="Вид на улицу города Седона.">
               </div>
             </li>
             <li class="block-blue white-blue">
@@ -108,7 +113,7 @@
                   Красивая<br>дорога
                 </h3>
                 <p>
-                  Ехать в Седону из Лас-Вегаса совсем не скучно!
+                  Ехать&nbsp;в&nbsp;Седону&nbsp;из&nbsp;Лас&#8209;Вегаса совсем не скучно!
                 </p>
               </div>
             </li>
@@ -132,7 +137,7 @@
                 </p>
               </div>
               <div class="block-image">
-                <img class="content-img" src="images/cap-devil.jpg" width="800" height="385" alt="Вид на мыс Дьявола">
+                <img class="content-img" src="images/cap-devil.jpg" width="800" height="385" alt="Вид на мыс Дьявола.">
               </div>
             </li>
           </ul>
@@ -149,19 +154,26 @@
           <ul class="offers">
             <li class="offers-item blue">
               <div class="offers-item-description">
-                <img
-                  src="images/icon-home.svg" width="75" height="72" alt="Изображение дома">
-                <h3>
-                  Жильё
-                </h3>
-                <p>
-                  Рекомендуем пожить в&nbsp;настоящем мотеле,<br>всё как в кино!
-                </p>
+                <div class="home-image">
+                  <span class="visually-hidden">
+                    Графическое изображение дома.
+                  </span>
+                </div>
+                  <h3>
+                    Жильё
+                  </h3>
+                  <p>
+                    Рекомендуем пожить в&nbsp;настоящем мотеле,<br>всё как в кино!
+                  </p>
               </div>
             </li>
             <li class="offers-item">
               <div class="offers-item-description">
-                <img src="images/icon-food.svg" width="74" height="70" alt="Изображение еды">
+                <div class="food-image">
+                  <span class="visually-hidden">
+                    Графическое изображение гамбургера.
+                  </span>
+                </div>
                 <h3>
                   Еда
                 </h3>
@@ -172,7 +184,11 @@
             </li>
             <li class="offers-item blue">
               <div class="offers-item-description">
-                <img src="images/icon-souvenir.svg" width="64" height="75" alt="Изображение подарка">
+                <div class="souvenir-image">
+                  <span class="visually-hidden">
+                    Графическое изображение подарка.
+                  </span>
+                </div>
                 <h3>
                   Сувениры
                 </h3>
@@ -197,6 +213,9 @@
               <a class="button button-search" href="catalog.html">
                 Поиск гостиницы в Седоне
               </a>
+              <span class="visually-hidden">
+                Перейти на страницу с выбором гостиницы.
+              </span>
             </div>
           </div>
         </section>
@@ -211,7 +230,7 @@
               </p>
             </div>
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-              <input class="subscribe-input" type="text" name="e-mail" placeholder="Ваш e-mail">
+              <input class="subscribe-input" type="text" name="e-mail" placeholder="Ваш e-mail" required>
               <input class="button button-subscribe" type="submit" value="Подписаться">
             </form>
           </div>
@@ -226,7 +245,7 @@
                   <path d="M24.1 1.8c.2-.5 0-1-.8-1h-2.6c-.7 0-1 .4-1.1.8 0 0-1.4 3.2-3.3 5.3-.6.6-.9.8-1.2.8-.2 0-.4-.2-.4-.8V1.8c0-.7-.2-1-.8-1h-4c-.5 0-.8.4-.8.6 0 .7 1 .8 1 2.6v3.8c0 .8 0 1-.4 1-.9 0-3-3.3-4.3-7-.3-.7-.5-1-1.2-1H1.6c-.8 0-1 .4-1 .8 0 .7 1 4 4.2 8.5C7 13.2 10 15 12.8 15c1.7 0 1.9-.4 1.9-1v-2.4c0-.7.2-.8.7-.8.4 0 1 .1 2.6 1.6 1.8 1.8 2 2.6 3 2.6h2.7c.7 0 1.1-.4 1-1.1-.3-.8-1.2-1.8-2.3-3-.6-.8-1.5-1.5-1.8-2-.4-.4-.3-.6 0-1 0 0 3.2-4.5 3.5-6Z"/>
                 </svg>
                 <span class="visually-hidden">
-                  Vkontakte
+                  Мы Vkontakte.
                 </span>
               </a>
             </li>
@@ -236,7 +255,7 @@
                   <path d="M16.8 1 .8 7c-1 .4-1 1-.2 1.3l4.1 1.3 9.5-6c.5-.3.9-.1.5.2l-7.6 7-.3 4.1c.4 0 .6-.2.8-.4l2-2 4.1 3.1c.8.5 1.3.3 1.5-.7L18 2.2c.3-1-.4-1.6-1.1-1.2Z"/>
                 </svg>
                 <span class="visually-hidden">
-                  Telegram
+                  Мы в Telegram.
                 </span>
               </a>
             </li>
@@ -246,7 +265,7 @@
                   <path d="M19 .4H3.4C1.6.4.3 2 .3 3.8v10c0 2 1.3 3.6 3.2 3.6h15.7c1.6 0 3.1-1.6 3.1-3.4V3.8C22.1 2 20.8.4 19 .4ZM8 12.9v-8l7.3 4-7.3 4Z"/>
                 </svg>
                 <span class="visually-hidden">
-                  Youtube
+                  Мы в Youtube.
                 </span>
               </a>
             </li>
@@ -254,12 +273,15 @@
           <a class="phone" href="tel:+78128121212">
             +7 (812) 812-12-12
           </a>
+          <span class="visually-hidden">
+            Позвоните нам.
+          </span>
           <a class="logo-academy" href="https://htmlacademy.ru/">
             <svg width="115" height="34" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 13.3v2.6h2.5v-2.6H0ZM11.6 4.9c-1.6 0-2.8.7-3.6 1.7h-.1V.4h-2v15.5h2v-5.3C7.9 8.5 9.2 7 11.2 7c1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.8c.1-3-1.8-5-4.5-5ZM26.6 5.2h-4.8V1.5h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V7.2h4.8v-2ZM41.1 5c-1.6 0-2.9.8-3.5 2h-.1a3.7 3.7 0 0 0-3.4-2c-1.4 0-2.5.8-3.1 1.8h-.1V5.2H29v10.6h2v-5.4c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V9.3c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 13c0 1.8 1 2.8 2.8 2.8h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V.4h-2V13ZM28.9 20a4.9 4.9 0 0 0-3.9-1.7c-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-2h.1v1.7h2V18.6h-2V20Zm-3.6 7.5a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22.4c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3 3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6 1.6 0 2.8 1 3.3 2.2h2.1v-.2ZM55.1 20a4.9 4.9 0 0 0-3.9-1.7c-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-2h.1v1.7h2V18.6h-2V20Zm-3.6 7.5a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 20.2a5 5 0 0 0-3.9-2c-3.1 0-5.4 2.4-5.4 5.7 0 3.3 2.2 5.6 5.4 5.6 1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.8h-2v6.4Zm-3.6 7.3a3.5 3.5 0 0 1-3.6-3.6c0-2 1.4-3.6 3.6-3.6s3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 18.3a5.4 5.4 0 0 0-5.5 5.6c0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-3h8.8c.2-3.5-2-6.2-5.5-6.2Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5a3.2 3.2 0 0 1 3.2-2.6ZM98.2 18.3a4 4 0 0 0-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27.4l-3.6-9h-2.2l4.8 11.7c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z" fill="currentColor"/>
             </svg>
             <span class="visually-hidden">
-              html Академия
+              Перейти на страницу html Академия.
             </span>
           </a>
         </div>
@@ -267,12 +289,12 @@
     </div>
     <div class="modal-container modal-container-close">
       <div class="modal modal-card">
-        <button class="modal-close-button">
+        <button class="modal-close-button" type="button">
           <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z" fill="currentColor"/>
           </svg>
           <span class="visually-hidden">
-            Закрыть
+            Закрыть окно.
           </span>
         </button>
         <section class="modal-content">
@@ -284,7 +306,7 @@
               <label class="parametr" for="data-in">
                 Дата Заезда:
               </label>
-              <input class="check-date" type="text" id="data-in" placeholder="Укажите дату заезда" >
+              <input class="check-date" type="text" name="data-in" id="data-in" placeholder="Укажите дату заезда" value="27 апреля 2020" required>
               <span class="comment-input error">
                 Мы не можем отправить вас в прошлое.
               </span>
@@ -293,13 +315,16 @@
               <label class="parametr" for="data-out">
                 Дата Выезда:
               </label>
-              <input class="check-date" type="text" id="data-out" placeholder="Укажите дату выезда">
+              <input class="check-date" type="text" name="data-out" id="data-out" placeholder="Укажите дату выезда" value="1 сентября 2023" required>
               <span class="comment-input">
                 На эти даты есть свободные номера. Пока есть.
               </span>
             </p>
             <div class="options-search">
               <div class="add-parametr">
+                <span class="visually-hidden">
+                  Укажите количество гостей.
+                </span>
                 <label class="parametr" for="adult">
                   Взрослые:
                 </label>
@@ -310,12 +335,12 @@
                         <path d="M0 0L0 2L14 2V0L0 0Z" fill="currentColor" />
                       </svg>
                       <span class="visually-hidden">
-                        Убавить
+                        Убавить гостя.
                       </span>
                     </button>
                   </li>
                   <li class="select-number-item">
-                    <input class="number" type="text" id="adult" name="adult" value="2">
+                    <input class="number" type="text" id="adult" name="adult" value="2" required>
                   </li>
                   <li class="select-number">
                     <button class="button button-plus" type="button">
@@ -323,28 +348,29 @@
                         <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="currentColor" />
                       </svg>
                       <span class="visually-hidden">
-                        Прибавить.
+                        Добавить гостя.
                       </span>
                     </button>
                   </li>
                 </ul>
               </div>
               <div class="add-parametr">
-                <span class="form-label">
-                  <label class="form-label-parametr" for="children">
-                    Дети:
-                  </label>
-                  <span class="tooltip">
-                    <button class="tooltip-toggle" type="button">
-                      <svg class="tooltip-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4H11V6H9V4ZM11 16H9V7H11V16Z" fill="white" />
-                      </svg>
-                    </button>
+                <div class="label-tooltip-container">
+                  <span class="form-label">
+                    <label class="form-label-parametr" for="children">
+                      Дети:
+                    </label>
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button">
+                        <svg class="tooltip-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4H11V6H9V4ZM11 16H9V7H11V16Z" fill="white" />
+                        </svg>
+                      </button>
                     <span class="tooltip-text" role="tooltip" id="tooltip-label-date">
                       Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
                     </span>
                   </span>
-                </span>
+                </div>
                 <ul class="select-number">
                   <li class="select-number-item">
                     <button class="button button-minus" type="button">
@@ -352,13 +378,13 @@
                         <path d="M0 0L0 2L14 2V0L0 0Z" fill="currentColor" />
                       </svg>
                       <span class="visually-hidden">
-                        Убавить.
+                        Убавить гостя.
                       </span>
                     </button>
                   </li>
                   <li class="select-number-item">
                     <div class="select-number">
-                      <input class="number" type="text" id="children" name="children" value="2" >
+                      <input class="number" type="text" id="children" name="children" value="2" required>
                     </div>
                   </li>
                   <li class="select-number-item">
@@ -367,17 +393,20 @@
                         <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="currentColor" />
                       </svg>
                       <span class="visually-hidden">
-                        Прибавить.
+                        Добавить гостя.
                       </span>
                     </button>
                   </li>
                 </ul>
               </div>
             </div>
+            <button class="button button-search-modal" type="submit">
+              Найти
+              <span class="visually-hidden">
+                Подобрать подходящую гостиницу.
+              </span>
+            </button>
           </form>
-          <button class="button button-search-modal" type="button">
-            Найти
-          </button>
         </section>
       </div>
     </div>

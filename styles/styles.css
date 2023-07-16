@@ -28,6 +28,7 @@ body {
   color: #333333;
   text-align: center;
 }
+
 .page-container {
   width: 1200px;
   background: #ffffff;
@@ -54,21 +55,20 @@ body {
   display: flex;
   justify-content: space-between;
   width: 1200px;
-  height: 64px;
 }
 
 .page-navigation {
   display: flex;
   justify-content: space-between;
-  gap: 28px;
+  gap: 168px;
 }
 
 .logo-sedona {
-  position: relative;
+  position: absolute;
 }
 
 .page-menu {
-  width: 600px;
+  width: 500px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -76,22 +76,32 @@ body {
   padding: 0;
 }
 
-.page-menu-item a {
+.page-menu-item a{
+  margin: 0;
   padding: 20px 16px;
+  text-decoration: none;
+  color: #000000;
+  box-sizing: border-box;
+}
+
+.page-menu-item {
+  margin: 0;
+  padding: 20px 0;
+  min-height: 64px;
   font-size: 20px;
   line-height: 24px;
-  text-decoration: none;
+  box-sizing: border-box;
   color: #000000;
 }
 
 .page-menu-item a:hover {
+  color: #ffffff;
   background-color: #756257;
-  color: #fdfafa;
 }
 
 .page-menu-item a:active {
   background-color: #7dadcc;
-  color: #0f0f0f;
+  color: #000000;
 }
 
 .page-first {
@@ -126,8 +136,19 @@ body {
 
 .user-menu {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
+  padding: 0;
+}
+
+.user-menu-item-box {
+  width: 88px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  margin-right: 20px;
   padding: 0;
 }
 
@@ -150,7 +171,6 @@ body {
   background-image: url("../images/icon-heart.svg");
   background-repeat: no-repeat;
   padding: 22px 12px;
-  margin-right: 20px;
   background-position: center;
   position: relative;
 }
@@ -389,6 +409,7 @@ body {
 }
 
 .block-description-2 p {
+  width: 230px;
   margin: 0;
   padding: 0;
 }
@@ -450,6 +471,30 @@ body {
   gap: 30px;
   width: 230px;
   padding: 80px 85px;
+}
+
+.home-image {
+  background-image: url("..//images/icon-home.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 74px ;
+  height: 75px;
+}
+
+.food-image {
+  background-image: url("..//images/icon-food.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 74px ;
+  height: 75px;
+}
+
+.souvenir-image {
+  background-image: url("..//images/icon-souvenir.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 64px ;
+  height: 75px;
 }
 
 .offers-item h3 {
@@ -634,13 +679,13 @@ body {
 .telegram:focus-visible,
 .youtube:focus-visible {
   outline: none;
-  color: #68a2ca4d;
+  color: #48718d;
 }
 
 .vkontakte:active,
 .telegram:active,
 .youtube:active {
-  color: #68a2ca4d;
+  color: #c6d8e4;
 }
 
 .subscribe-background {
@@ -648,6 +693,7 @@ body {
 }
 
 .phone {
+  width: 720px;
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
@@ -678,7 +724,7 @@ body {
 
 .phone:active,
 .logo-academy:active {
-  color: #7561574d;
+  color: #c0a89c;
 }
 
 .page-footer a {
@@ -814,13 +860,13 @@ body {
   opacity: 0;
 }
 
-.custom-checkbox+label {
+.custom-checkbox + label {
   display: inline-flex;
   align-items: center;
   user-select: none;
 }
 
-.custom-checkbox+label::before {
+.custom-checkbox + label::before {
   content: " ";
   display: inline-block;
   width: 20px;
@@ -834,30 +880,30 @@ body {
   background-position: center center;
 }
 
-.custom-checkbox:checked+label::before {
+.custom-checkbox:checked + label::before {
   background-color: #ffffff;
   background-image: url("../images/tick.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.custom-checkbox:not(:disabled)+label:hover::before {
+.custom-checkbox:not(:disabled) + label:hover::before {
   background-color: #83b3d3;
 }
 
-.custom-checkbox:not(:disabled):active+label::before {
+.custom-checkbox:not(:disabled):active + label::before {
   background-color: #83b3d3;
 }
 
-.custom-checkbox:focus-visible+label::before {
+.custom-checkbox:focus-visible + label::before {
   outline: 2px solid #83b3d3;
 }
 
-.custom-checkbox:not(:checked):focus-visible+label::before {
+.custom-checkbox:not(:checked):focus-visible + label::before {
   outline: 2px solid #83b3d3;
 }
 
-.custom-checkbox:disabled+label::before {
+.custom-checkbox:disabled + label::before {
   background-color: #999b9c;
 }
 
@@ -867,13 +913,13 @@ body {
   opacity: 0;
 }
 
-.custom-radio+label {
+.custom-radio + label {
   display: inline-flex;
   align-items: center;
   user-select: none;
 }
 
-.custom-radio+label::before {
+.custom-radio + label::before {
   content: " ";
   display: inline-block;
   width: 20px;
@@ -885,35 +931,35 @@ body {
   margin-right: 16px;
 }
 
-.custom-radio:not(:disabled):not(:checked)+label:hover::before {
+.custom-radio:not(:disabled):not(:checked) + label:hover::before {
   background-color: #83b3d3;
 }
 
-.custom-radio:checked+label:hover:before {
+.custom-radio:checked + label:hover:before {
   background-color: #83b3d3;
 }
 
-.custom-radio:not(:disabled):active+label::before {
+.custom-radio:not(:disabled):active + label::before {
   background-image: url("../images/radio.svg");
   background-position: center center;
   background-color: #83b3d3;
 }
 
-.custom-radio:focus-visible+label::before {
+.custom-radio:focus-visible + label::before {
   outline: 2px solid #83b3d3;
 }
 
-.custom-radio:focus-visible :not(:checked)+label::before {
+.custom-radio:focus-visible :not(:checked) + label::before {
   outline: 2px solid #83b3d3;
 }
 
-.custom-radio:checked+label::before {
+.custom-radio:checked + label::before {
   background-color: #ffffff;
   background-image: url("../images/radio.svg");
   background-position: center center;
 }
 
-.custom-radio:disabled+ label::before {
+.custom-radio:disabled + label::before {
   background-color: #999b9c;
 }
 
@@ -988,6 +1034,7 @@ body {
   border-style: none;
   width: 103px;
 }
+
 .number-start {
   border-radius: 4px 0 0 4px;
 }
@@ -1030,7 +1077,7 @@ body {
   position: absolute;
   height: 4px;
   border: none;
-  background-color: #fff;
+  background-color: #ffffff;
   width: 226px;
 }
 
@@ -1038,7 +1085,7 @@ body {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -1174,6 +1221,7 @@ body {
 .select-price {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
+  font-weight: 400;
   line-height: 21px;
   min-width: 292px;
   padding: 12px 18px;
@@ -1183,6 +1231,7 @@ body {
   background-image: url("../images/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 18px center;
+  background-color: #ffffff;
   appearance: none;
 }
 
@@ -1202,14 +1251,14 @@ body {
 .button-view {
   border-radius: 4px;
   border: 2px solid #e5e5e5;
-  background-color: #ffff;
+  background-color: #ffffff;
   cursor: pointer;
   min-width: 48px;
   min-height: 48px;
 }
 
 .button-view:hover {
-  border: 2px solid #000;
+  border: 2px solid #000000;
 }
 
 .button-view:focus-visible {
@@ -1221,7 +1270,7 @@ body {
   background-image: url("../images/catalog-view-1.svg");
   background-repeat: no-repeat;
   background-position: center;
-  border: 2px solid #000;
+  border: 2px solid #000000;
 }
 
 .view-2 {
@@ -1254,15 +1303,23 @@ body {
 .hotel-list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0;
   padding: 20px;
-  gap: 16px;
+}
+
+.hotel-photo {
+  margin-bottom: 16px;
+}
+
+.hotel-name {
+  margin-bottom: 16px;
 }
 
 .hotel-title {
   display: flex;
   justify-content: flex-start;
+  text-align: left;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -1276,6 +1333,7 @@ body {
 
 .hotel-price {
   margin: 0;
+  margin-bottom: 16px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1290,16 +1348,16 @@ body {
   margin: 0;
   width: 139px;
   text-align:left;
-
 }
 
 .hotel-price-cash {
   margin: 0;
   width: 139px;
-  text-align:right;
+  text-align: right;
 }
 
 .hotel-about {
+  margin-bottom: 16px;
   display: flex;
   justify-content: space-between;
 }
@@ -1329,6 +1387,12 @@ body {
 .green {
   background: #7db54f;
   padding: 8px 18px;
+}
+
+.hotel-rating {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
 }
 
 .stars-2 {
@@ -1367,11 +1431,6 @@ body {
   margin: 0;
   padding: 9px 0;
   border: 0;
-}
-.hotel-rating {
-  display: flex;
-  justify-content: space-between;
-  font-size: 16px;
 }
 
 .pagination {
@@ -1413,13 +1472,13 @@ body {
 
 .active {
   background-color: #f2f2f2;
-  color: #000;
+  color: #000000;
   border-radius: 4px;
 }
 
 .no-decor {
-  background-color: #fff;
-  color: #000;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .modal-container {
@@ -1484,7 +1543,7 @@ body {
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
-  font-family: "Pt Sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -1509,7 +1568,7 @@ body {
 }
 
 .parametr {
-  font-family: "Pt Sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -1517,8 +1576,17 @@ body {
   max-width: 137px;
 }
 
+.label-tooltip-container {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  margin-left: 10px;
+  width: 85px;
+}
+
 .form-label {
-  font-family: "Pt Sans", sans-serif;
+  position: relative;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -1530,15 +1598,13 @@ body {
 .form-label-parametr {
   margin: 0;
   padding: 0;
-  padding-left: 10px;
   text-align: start;
 }
 
 .tooltip {
   position: absolute;
-  width: 26px;
-  height: 26px;
-  padding-left: 10px;
+  bottom: 0;
+  left: 60px;
 }
 
 .tooltip-toggle {
@@ -1684,6 +1750,7 @@ body {
   cursor: pointer;
   border-radius: 4px;
   fill-opacity: 0.2;
+  background-color: #f2f2f2;
 }
 
 .button-plus {
@@ -1695,12 +1762,14 @@ body {
   cursor: pointer;
   border-radius: 4px;
   fill-opacity: 0.2;
+  background-color: #f2f2f2;
 }
 
 .button-minus:hover,
 .button-plus:hover {
   outline: none;
   box-shadow: none;
+  background-color: #f2f2f2;
   color: #000000;
   fill-opacity: 0.9;
 }
@@ -1708,6 +1777,7 @@ body {
 .button-minus:focus-visible,
 .button-plus:focus-visible {
   outline: 3px solid #82b3d3;
+  background-color: #f2f2f2;
   color: #000000;
   box-shadow: none;
   fill-opacity: 0.9;
@@ -1716,6 +1786,7 @@ body {
 .button-minus:active,
 .button-plus:active {
   outline: none;
+  background-color: #f2f2f2;
   color: #000000;
   box-shadow: none;
   fill-opacity: 0.2;
@@ -1745,7 +1816,7 @@ body {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   line-height: 24px;
-  margin-top: 48px;
+  margin-top: 25px;
   padding: 18px 77px;
   color: #ffffff;
   background-color: #83b3d3;
