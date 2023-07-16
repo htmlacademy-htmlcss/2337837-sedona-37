@@ -230,7 +230,7 @@
               </p>
             </div>
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-              <input class="subscribe-input" type="text" name="e-mail" placeholder="Ваш e-mail">
+              <input class="subscribe-input" type="text" name="e-mail" placeholder="Ваш e-mail" required>
               <input class="button button-subscribe" type="submit" value="Подписаться">
             </form>
           </div>
@@ -306,7 +306,7 @@
               <label class="parametr" for="data-in">
                 Дата Заезда:
               </label>
-              <input class="check-date" type="text" id="data-in" placeholder="Укажите дату заезда" >
+              <input class="check-date" type="text" name="data-in" id="data-in" placeholder="Укажите дату заезда" value="27 апреля 2020" required>
               <span class="comment-input error">
                 Мы не можем отправить вас в прошлое.
               </span>
@@ -315,7 +315,7 @@
               <label class="parametr" for="data-out">
                 Дата Выезда:
               </label>
-              <input class="check-date" type="text" id="data-out" placeholder="Укажите дату выезда">
+              <input class="check-date" type="text" name="data-out" id="data-out" placeholder="Укажите дату выезда" value="1 сентября 2023" required>
               <span class="comment-input">
                 На эти даты есть свободные номера. Пока есть.
               </span>
@@ -340,7 +340,7 @@
                     </button>
                   </li>
                   <li class="select-number-item">
-                    <input class="number" type="text" id="adult" name="adult" value="2">
+                    <input class="number" type="text" id="adult" name="adult" value="2" required>
                   </li>
                   <li class="select-number">
                     <button class="button button-plus" type="button">
@@ -384,7 +384,7 @@
                   </li>
                   <li class="select-number-item">
                     <div class="select-number">
-                      <input class="number" type="text" id="children" name="children" value="2" >
+                      <input class="number" type="text" id="children" name="children" value="2" required>
                     </div>
                   </li>
                   <li class="select-number-item">
@@ -400,13 +400,13 @@
                 </ul>
               </div>
             </div>
+            <button class="button button-search-modal" type="submit">
+              Найти
+              <span class="visually-hidden">
+                Подобрать подходящую гостиницу.
+              </span>
+            </button>
           </form>
-          <button class="button button-search-modal" type="button">
-            Найти
-            <span class="visually-hidden">
-              Подобрать подходящую гостиницу.
-            </span>
-          </button>
         </section>
       </div>
     </div>

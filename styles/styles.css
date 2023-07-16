@@ -28,6 +28,7 @@ body {
   color: #333333;
   text-align: center;
 }
+
 .page-container {
   width: 1200px;
   background: #ffffff;
@@ -54,7 +55,6 @@ body {
   display: flex;
   justify-content: space-between;
   width: 1200px;
-
 }
 
 .page-navigation {
@@ -99,7 +99,7 @@ body {
   background-color: #756257;
 }
 
-.page-menu-item:active {
+.page-menu-item a:active {
   background-color: #7dadcc;
   color: #000000;
 }
@@ -471,7 +471,6 @@ body {
   gap: 30px;
   width: 230px;
   padding: 80px 85px;
-
 }
 
 .home-image {
@@ -900,11 +899,11 @@ body {
   outline: 2px solid #83b3d3;
 }
 
-.custom-checkbox:not(:checked):focus-visible+label::before {
+.custom-checkbox:not(:checked):focus-visible + label::before {
   outline: 2px solid #83b3d3;
 }
 
-.custom-checkbox:disabled+label::before {
+.custom-checkbox:disabled + label::before {
   background-color: #999b9c;
 }
 
@@ -1035,6 +1034,7 @@ body {
   border-style: none;
   width: 103px;
 }
+
 .number-start {
   border-radius: 4px 0 0 4px;
 }
@@ -1603,7 +1603,7 @@ body {
 
 .tooltip {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 60px;
 }
 
@@ -1816,7 +1816,7 @@ body {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   line-height: 24px;
-  margin-top: 48px;
+  margin-top: 25px;
   padding: 18px 77px;
   color: #ffffff;
   background-color: #83b3d3;
